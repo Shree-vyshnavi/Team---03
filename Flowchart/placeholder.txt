@@ -1,1 +1,13 @@
-
+[Power Switch Turned ON]
+    ↓
+[Electric Motor]
+    ↓
+[Drives the Drive Wheel]
+    ↓
+[Rotates the Sanding Belt]
+    ↓
+[Material Pressed Against Belt]
+    ↓
+[Sanding/Grinding Occurs]
+    ↓
+[Finished Surface Output]
