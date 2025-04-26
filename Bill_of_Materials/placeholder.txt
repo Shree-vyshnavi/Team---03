@@ -1,1 +1,15 @@
+| S.No | Component             | Quantity | Description |
+|:---:|:----------------------|:--------:|:------------|
+| 1 | Arduino Mega 2560 Board | 1 | Microcontroller |
+| 2 | Relay Module | 1 | Motor switching |
+| 3 | IR Obstacle Sensor | 1 | Detects material |
+| 4 | DC Motor (High Torque) | 1 | Drives sanding belt |
+| 5 | Motor Shaft Pulley | 1 | Connects shaft to belt |
+| 6 | Sanding Belt | 1 | For material grinding |
+| 7 | Charge Controller | 1 | Power management |
+| 8 | Power Supply Adapter | 1 | 110/220V to DC |
+| 9 | Frame and Base Plate (Custom Fabricated) | 1 | Machine body |
+| 10 | Screws, Bolts & Nuts | As needed | Assembly parts |
+| 11 | Power Switch | 1 | Turn system ON/OFF |
+| 12 | Wires & Connectors | As needed | Electrical wiring |
 
