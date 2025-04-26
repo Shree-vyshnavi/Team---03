@@ -1,1 +1,24 @@
+// Define pins
+#define motorRelayPin 7
+#define sensorPin 8
+
+void setup() {
+  pinMode(motorRelayPin, OUTPUT);
+  pinMode(sensorPin, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int sensorValue = digitalRead(sensorPin);
+
+  if (sensorValue == LOW) { 
+    digitalWrite(motorRelayPin, HIGH);  // Turn Motor ON
+    Serial.println("Material detected: Motor ON");
+  } else {
+    digitalWrite(motorRelayPin, LOW);   // Turn Motor OFF
+    Serial.println("No material detected: Motor OFF");
+  }
+
+  delay(100);
+}
 
