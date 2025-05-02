@@ -1,24 +1,26 @@
-// Define pins
-#define motorRelayPin 7
-#define sensorPin 8
+// Pin definitions
+const int irSensorPin = 7;     // IR sensor output pin (connected to D7)
+const int relayPin = 8;        // Relay control pin (connected to D8)
 
 void setup() {
-  pinMode(motorRelayPin, OUTPUT);
-  pinMode(sensorPin, INPUT);
+  pinMode(irSensorPin, INPUT);   // IR sensor as input
+  pinMode(relayPin, OUTPUT);     // Relay as output
+  digitalWrite(relayPin, LOW);   // Ensure motor is OFF initially
   Serial.begin(9600);
 }
 
 void loop() {
-  int sensorValue = digitalRead(sensorPin);
+  int irState = digitalRead(irSensorPin);  // Read IR sensor value
 
-  if (sensorValue == LOW) { 
-    digitalWrite(motorRelayPin, HIGH);  // Turn Motor ON
-    Serial.println("Material detected: Motor ON");
+  if (irState == LOW) {
+    // Object detected
+    digitalWrite(relayPin, HIGH);  // Turn ON relay (motor ON)
+    Serial.println("Object Detected - Motor ON");
   } else {
-    digitalWrite(motorRelayPin, LOW);   // Turn Motor OFF
-    Serial.println("No material detected: Motor OFF");
+    // No object detected
+    digitalWrite(relayPin, LOW);   // Turn OFF relay (motor OFF)
+    Serial.println("No Object - Motor OFF");
   }
 
-  delay(100);
+  delay(100);  // Small delay for stability
 }
-
